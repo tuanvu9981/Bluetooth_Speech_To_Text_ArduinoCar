@@ -8,15 +8,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:textSize="15dp"
-        android:layout_marginLeft="140dp"
+        android:textSize="18dp"
+        android:layout_marginLeft="85dp"
         android:textColor="@color/red"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btnGet"
-        android:text="Get Paired Devices"
-        android:layout_marginLeft="100dp"
+        android:text="Các thiết bị đã ghép đôi"
+        android:layout_marginLeft="75dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"/>
 
@@ -33,19 +33,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btn1"
-            android:text="Connect 1"
+            android:text="Kết nối id1"
             />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btn2"
-            android:text="Connect 2"
+            android:text="Kết nối id2"
             />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btn3"
-            android:text="Connect 3"
+            android:text="Kết nối id3"
             />
     </LinearLayout>
 
@@ -57,19 +57,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btn4"
-            android:text="Connect 4"
+            android:text="Kết nối id4"
             />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btn5"
-            android:text="Connect 5"
+            android:text="Kết nối id5"
             />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btn6"
-            android:text="Connect 6"
+            android:text="Kết nối id6"
             />
     </LinearLayout>
     <TextView
@@ -78,13 +78,22 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:textColor="@color/green"
+        android:textSize="16dp"
         android:layout_marginLeft="110dp"/>
+    <TextView
+        android:id="@+id/deviceMsgDisconnect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/green"
+        android:textSize="16dp"
+        android:layout_marginLeft="90dp"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/destroy_connect_btn"
-        android:text="Destroy Connection"
-        android:layout_marginLeft="90dp"
+        android:text="Ngắt kết nối"
+        android:layout_marginLeft="120dp"
         />
 
     <TextView
@@ -103,7 +112,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="8dp"
-        android:layout_marginLeft="110dp"
+        android:layout_marginLeft="120dp"
         android:gravity="center"
         android:orientation="vertical">
         <ImageButton
@@ -118,7 +127,7 @@
             android:layout_marginTop="10dp"
             android:text="@string/tap_on_mic"
             android:textColor="@color/black"
-            android:textSize="15dp"
+            android:textSize="16dp"
             android:textStyle="normal"/>
     </LinearLayout>
 </LinearLayout>

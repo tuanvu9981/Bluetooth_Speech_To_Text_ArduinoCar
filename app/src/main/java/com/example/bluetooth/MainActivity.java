@@ -17,6 +17,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -88,7 +90,7 @@ public class MainActivity extends Activity {
                             for (BluetoothDevice device : pairedDevices) {
                                 count++;
                                 deviceHashMaps.put(count, device);
-                                list.add(count + ".\t" + device.getName() + " - " + device.getAddress() + "\n");
+                                list.add("id"+count + " )\t" + device.getName() + " [MAC: " + device.getAddress() + "]\n");
                             }
                             listView = (ListView) findViewById(R.id.deviceList);
                             aAdapter = new ArrayAdapter(getApplicationContext(), android.R.layout.simple_list_item_1, list);
@@ -109,6 +111,7 @@ public class MainActivity extends Activity {
         Button btn6 = (Button)findViewById(R.id.btn6);
         TextView errMessage = (TextView)findViewById(R.id.errMessage);
         TextView deviceMessage = (TextView)findViewById(R.id.deviceMessage);
+        TextView deviceMsgDisconnect = (TextView)findViewById(R.id.deviceMsgDisconnect);
         Button destroyConnectBtn = (Button)findViewById(R.id.destroy_connect_btn);
 
         btn1.setOnClickListener(new View.OnClickListener() {
@@ -116,7 +119,7 @@ public class MainActivity extends Activity {
             public void onClick(View view) throws SecurityException{
                 try {
                     if (deviceHashMaps.get(1) == null){
-                        errMessage.setText("Device Null");
+                        errMessage.setText("Thiết bị NULL");
                         return;
                     }
 
@@ -125,8 +128,9 @@ public class MainActivity extends Activity {
                     if (btSock1.isConnected()) {
                         inputStream = btSock1.getInputStream();
                         outputStream = btSock1.getOutputStream();
-                        deviceMessage.setText("Deviced 1 Connected !");
+                        deviceMessage.setText("Đã kết nối thiết bị 1 !");
                         errMessage.setText("");
+                        deviceMsgDisconnect.setText("");
                     } else errMessage.setText("IO Exception Connect 1");
                 } catch (IOException ioException){
                     ioException.printStackTrace();
@@ -139,7 +143,7 @@ public class MainActivity extends Activity {
             public void onClick(View view) throws SecurityException{
                 try {
                     if (deviceHashMaps.get(2) == null){
-                        errMessage.setText("Device Null");
+                        errMessage.setText("Thiết bị NULL");
                         return;
                     }
                     btSock2 = deviceHashMaps.get(2).createRfcommSocketToServiceRecord(MY_UUID);
@@ -147,8 +151,9 @@ public class MainActivity extends Activity {
                         btSock2.connect();
                         inputStream = btSock2.getInputStream();
                         outputStream = btSock2.getOutputStream();
-                        deviceMessage.setText("Deviced 2 Connected !");
+                        deviceMessage.setText("Đã kết nối thiết bị 2 !");
                         errMessage.setText("");
+                        deviceMsgDisconnect.setText("");
                     } else errMessage.setText("IO Exception Connect 2");
                 } catch (IOException ioException){
                     ioException.printStackTrace();
@@ -161,7 +166,7 @@ public class MainActivity extends Activity {
             public void onClick(View view) throws SecurityException{
                 try {
                     if (deviceHashMaps.get(3) == null){
-                        errMessage.setText("Device Null");
+                        errMessage.setText("Thiết bị NULL");
                         return;
                     }
                     btSock3 = deviceHashMaps.get(3).createRfcommSocketToServiceRecord(MY_UUID);
@@ -169,8 +174,9 @@ public class MainActivity extends Activity {
                     if (btSock3.isConnected()){
                         inputStream = btSock3.getInputStream();
                         outputStream = btSock3.getOutputStream();
-                        deviceMessage.setText("Deviced 3 Connected !");
+                        deviceMessage.setText("Đã kết nối thiết bị 3 !");
                         errMessage.setText("");
+                        deviceMsgDisconnect.setText("");
                     } else errMessage.setText("IO Exception Connect 3");
                 } catch (IOException ioException){
                     ioException.printStackTrace();
@@ -183,7 +189,7 @@ public class MainActivity extends Activity {
             public void onClick(View view) throws SecurityException{
                 try {
                     if (deviceHashMaps.get(4) == null){
-                        errMessage.setText("Device Null");
+                        errMessage.setText("Thiết bị NULL");
                         return;
                     }
                     btSock4 = deviceHashMaps.get(4).createRfcommSocketToServiceRecord(MY_UUID);
@@ -191,8 +197,9 @@ public class MainActivity extends Activity {
                     if (btSock4.isConnected()){
                         inputStream = btSock4.getInputStream();
                         outputStream = btSock4.getOutputStream();
-                        deviceMessage.setText("Deviced 4 Connected !");
+                        deviceMessage.setText("Đã kết nối thiết bị 4 !");
                         errMessage.setText("");
+                        deviceMsgDisconnect.setText("");
                     } else errMessage.setText("IO Exception Connect 4");
 
                 } catch (IOException ioException){
@@ -206,7 +213,7 @@ public class MainActivity extends Activity {
             public void onClick(View view) throws SecurityException{
                 try {
                     if (deviceHashMaps.get(5) == null){
-                        errMessage.setText("Device Null");
+                        errMessage.setText("Thiết bị NULL");
                         return;
                     }
                     btSock5 = deviceHashMaps.get(5).createRfcommSocketToServiceRecord(MY_UUID);
@@ -214,8 +221,9 @@ public class MainActivity extends Activity {
                     if (btSock5.isConnected()) {
                         inputStream = btSock5.getInputStream();
                         outputStream = btSock5.getOutputStream();
-                        deviceMessage.setText("Deviced 5 Connected !");
+                        deviceMessage.setText("Đã kết nối thiết bị 5 !");
                         errMessage.setText("");
+                        deviceMsgDisconnect.setText("");
                     } else errMessage.setText("IO Exception Connect 5");
                 } catch (IOException ioException){
                     ioException.printStackTrace();
@@ -228,7 +236,7 @@ public class MainActivity extends Activity {
             public void onClick(View view) throws SecurityException{
                 try {
                     if (deviceHashMaps.get(6) == null){
-                        errMessage.setText("Device Null");
+                        errMessage.setText("Thiết bị NULL");
                         return;
                     }
                     btSock6 = deviceHashMaps.get(6).createRfcommSocketToServiceRecord(MY_UUID);
@@ -236,8 +244,9 @@ public class MainActivity extends Activity {
                     if (btSock6.isConnected()) {
                         inputStream = btSock6.getInputStream();
                         outputStream = btSock6.getOutputStream();
-                        deviceMessage.setText("Deviced 6 Connected !");
+                        deviceMessage.setText("Đã kết nối thiết bị 6 !");
                         errMessage.setText("");
+                        deviceMsgDisconnect.setText("");
                     } else errMessage.setText("IO Exception Connect 6");
                 } catch (IOException ioException){
                     ioException.printStackTrace();
@@ -252,32 +261,38 @@ public class MainActivity extends Activity {
                     if (btSock1 != null) {
                         btSock1.close();
                         errMessage.setText("");
-                        deviceMessage.setText("Closing Connection 1: DONE!");
+                        deviceMessage.setText("");
+                        deviceMsgDisconnect.setText("Đã đóng kết nối thiết bị 1 !");
                     }
                     if (btSock2 != null) {
                         btSock2.close();
                         errMessage.setText("");
-                        deviceMessage.setText("Closing Connection 2: DONE!");
+                        deviceMessage.setText("");
+                        deviceMsgDisconnect.setText("Đã đóng kết nối thiết bị 2 !");
                     }
                     if (btSock3 != null) {
                         btSock3.close();
                         errMessage.setText("");
-                        deviceMessage.setText("Closing Connection 3: DONE!");
+                        deviceMessage.setText("");
+                        deviceMsgDisconnect.setText("Đã đóng kết nối thiết bị 3 !");
                     }
                     if (btSock4 != null) {
                         btSock4.close();
                         errMessage.setText("");
-                        deviceMessage.setText("Closing Connection 4: DONE!");
+                        deviceMessage.setText("");
+                        deviceMsgDisconnect.setText("Đã đóng kết nối thiết bị 4 !");
                     }
                     if (btSock5 != null) {
                         btSock5.close();
                         errMessage.setText("");
-                        deviceMessage.setText("Closing Connection 5: DONE!");
+                        deviceMessage.setText("");
+                        deviceMsgDisconnect.setText("Đã đóng kết nối thiết bị 5 !");
                     }
                     if (btSock6 != null) {
                         btSock6.close();
                         errMessage.setText("");
-                        deviceMessage.setText("Closing Connection 6: DONE!");
+                        deviceMessage.setText("");
+                        deviceMsgDisconnect.setText("Đã đóng kết nối thiết bị 6 !");
                     }
                 } catch (IOException e){
                     e.printStackTrace();
@@ -291,27 +306,27 @@ public class MainActivity extends Activity {
 
         // TURN LEFT
         if (turnLeftCommands.contains(lowercaseSpeech)){
-            outputStream.write('a');
+            outputStream.write('l');
         }
 
         // TURN RIGHT
         if (turnRightCommands.contains(lowercaseSpeech)){
-            outputStream.write('d');
+            outputStream.write('r');
         }
 
         // FORWARD
         if (moveForwardCommands.contains(lowercaseSpeech)){
-            outputStream.write('w');
+            outputStream.write('f');
         }
 
         // BACKWARD
         if (moveBackwardCommands.contains(lowercaseSpeech)){
-            outputStream.write('s');
+            outputStream.write('b');
         }
 
         // STOP
         if (stopCommands.contains(lowercaseSpeech)){
-            outputStream.write('g');
+            outputStream.write('s');
         }
 
     }
