@@ -15,4 +15,4 @@
   - Tham khảo 2: [Bluetooth API Scanner Android](https://viblo.asia/p/tim-hieu-ve-bluetooth-api-tren-android-tao-mot-ung-dung-bluetooth-scanner-3wjAM7JARmWe)
   - Tham khảo 3: [Bluetooth Github API](https://github.com/cong91/BluetoothScannerTutorial)
 - **Thiết lập code xe arduino**:
-  - Link đến mã nguồn:
+  - Link đến mã nguồn: https://github.com/tuanvu9981/Bluetooth_Speech_To_Text_ArduinoCar/blob/master/arduno-code/sketch_apr18a.ino
