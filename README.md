@@ -35,7 +35,7 @@
   <tr align="center">
     <th>
         <img 
-            src="https://github.com/tuanvu9981/Bluetooth_Speech_To_Text_ArduinoCar/blob/master/image/app1.jpg"
+            src="https://github.com/tuanvu9981/Bluetooth_Speech_To_Text_ArduinoCar/blob/master/image/app1.png"
             width="80%" 
             height="80%"
         />
@@ -51,6 +51,14 @@
 
   <tr align="center">
     <td>Màn hình ban đầu</td>
-    <td>Thứ tự thao tác và kết quả</td>
+    <td>
+      <p>Thứ tự thao tác và kết quả</p>
+      <ul>
+        <li>Kết nối bluetooth với máy điện thoại với mã code 123 hoặc 123456</li>
+        <li>Chọn 1. Lấy danh sách các thiết bị bluetooth đã ghép đôi với smartphone</li>
+        <li>Chọn 2: Tạo kết nối giữa điện thoại và thiết bị có id trùng với số trên nút</li>
+        <li>Chọn 3: Nhấn nút micro, nói mệnh lệnh và chạm micro lần 2 để kết thúc</li>
+      </ul>  
+    </td>
   </tr>
 </table>
