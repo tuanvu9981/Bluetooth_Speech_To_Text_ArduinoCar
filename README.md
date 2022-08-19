@@ -16,3 +16,41 @@
   - Tham khảo 3: [Bluetooth Github API](https://github.com/cong91/BluetoothScannerTutorial)
 - **Thiết lập code xe arduino**:
   - Link đến mã nguồn: https://github.com/tuanvu9981/Bluetooth_Speech_To_Text_ArduinoCar/blob/master/arduno-code/sketch_apr18a.ino
+
+- **Thành quả:**
+<p align="center">
+  <img 
+    src="https://github.com/tuanvu9981/Bluetooth_Speech_To_Text_ArduinoCar/blob/master/image/car.jpg" 
+    width="90%" 
+  />
+  <br/>
+  <p align="center">
+    <b>Arduino Car & Android Code </b>
+  </p>
+</p>
+
+- **Giao diện ứng dụng:**
+
+<table align="center">
+  <tr align="center">
+    <th>
+        <img 
+            src="https://github.com/tuanvu9981/Bluetooth_Speech_To_Text_ArduinoCar/blob/master/image/app1.jpg"
+            width="80%" 
+            height="80%"
+        />
+    </th>
+    <th>
+        <img 
+            src="https://github.com/tuanvu9981/Bluetooth_Speech_To_Text_ArduinoCar/blob/master/image/app4.jpg"
+            width="80%" 
+            height="80%"
+        />
+    </th>
+  </tr>
+
+  <tr align="center">
+    <td>Màn hình ban đầu</td>
+    <td>Thứ tự thao tác và kết quả</td>
+  </tr>
+</table>
