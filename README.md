@@ -49,11 +49,11 @@
     </th>
   </tr>
 
-  <tr align="center">
-    <td>Màn hình ban đầu</td>
+  <tr>
+    <td align="center"><b>Màn hình ban đầu</b></td>
     <td>
-      <p>Thứ tự thao tác và kết quả</p>
-      <ul>
+      <p align="center"><b>Thứ tự thao tác và kết quả</b></p>
+      <ul align="left">
         <li>Kết nối bluetooth với máy điện thoại với mã code 123 hoặc 123456</li>
         <li>Chọn 1. Lấy danh sách các thiết bị bluetooth đã ghép đôi với smartphone</li>
         <li>Chọn 2: Tạo kết nối giữa điện thoại và thiết bị có id trùng với số trên nút</li>
